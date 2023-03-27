@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <title>Mouse Events Example</title>
+      <style>
+         #outer {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            padding: 10px;
+         }
+
+         #inner {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="outer">
+         <div id="inner"></div>
+      </div>
+
+      <script>
+         const outer = document.getElementById("outer")
+         const inner = document.getElementById("inner")
+
+         outer.addEventListener("mouseover", function () {
+            console.log("mouseover on outer")
+         })
+
+         outer.addEventListener("mouseenter", function () {
+            console.log("mouseenter on outer")
+         })
+
+         outer.addEventListener("mouseout", function () {
+            console.log("mouseout on outer")
+         })
+
+         outer.addEventListener("mouseleave", function () {
+            console.log("mouseleave on outer")
+         })
+
+         inner.addEventListener("mouseover", function () {
+            console.log("mouseover on inner".toUpperCase())
+         })
+
+         inner.addEventListener("mouseenter", function () {
+            console.log("mouseenter on inner".toUpperCase())
+         })
+
+         inner.addEventListener("mouseout", function () {
+            console.log("mouseout on inner".toUpperCase())
+         })
+
+         inner.addEventListener("mouseleave", function () {
+            console.log("mouseleave on inner".toUpperCase())
+         })
+      </script>
+   </body>
+</html>
