@@ -4,59 +4,83 @@
       <meta charset="UTF-8" />
       <title>Mouse Events Example</title>
       <style>
-         #outer {
-            width: 200px;
-            height: 200px;
-            background-color: lightblue;
+         body {
+            display: flex;
+            justify-content: space-evenly;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+         }
+         .outer {
+            width: 300px;
+            height: 300px;
+            background-color: purple;
             padding: 10px;
+          
          }
 
-         #inner {
-            width: 100px;
-            height: 100px;
-            background-color: pink;
+         .inner {
+            width: 150px;
+            height: 150px;
+            background-color: gold;
          }
+
+         .me-ml {
+            display: block;
+            text-align: center;
+         }
+
       </style>
    </head>
    <body>
-      <div id="outer">
-         <div id="inner"></div>
+      <div class="me-ml">
+         <p>MOUSEENTER / MOUSELEAVE</p>
+         <div class="outer" id="outerA">
+            <div class="inner" id="innerA"></div>
+         </div>
+      </div>
+
+      <div class="me-ml">
+         <p>MOUSEOVER / MOUSEOUT</p>
+      <div class="outer" id="outerB">
+         <div class="inner" id="innerB"></div>
+      </div>
       </div>
 
       <script>
-         const outer = document.getElementById("outer")
-         const inner = document.getElementById("inner")
+         const outerA = document.getElementById("outerA")
+         const innerA = document.getElementById("innerA")
+         const outerB = document.getElementById("outerB")
+         const innerB = document.getElementById("innerB")
 
-         outer.addEventListener("mouseover", function () {
-            console.log("mouseover on outer")
-         })
-
-         outer.addEventListener("mouseenter", function () {
+         outerA.addEventListener("mouseenter", function () {
             console.log("mouseenter on outer")
          })
-
-         outer.addEventListener("mouseout", function () {
-            console.log("mouseout on outer")
-         })
-
-         outer.addEventListener("mouseleave", function () {
+         outerA.addEventListener("mouseleave", function () {
             console.log("mouseleave on outer")
          })
 
-         inner.addEventListener("mouseover", function () {
-            console.log("mouseover on inner".toUpperCase())
-         })
-
-         inner.addEventListener("mouseenter", function () {
+         innerA.addEventListener("mouseenter", function () {
             console.log("mouseenter on inner".toUpperCase())
          })
 
-         inner.addEventListener("mouseout", function () {
-            console.log("mouseout on inner".toUpperCase())
+         innerA.addEventListener("mouseleave", function () {
+            console.log("mouseleave on inner".toUpperCase())
          })
 
-         inner.addEventListener("mouseleave", function () {
-            console.log("mouseleave on inner".toUpperCase())
+         outerB.addEventListener("mouseout", function () {
+            console.log("mouseout on outer")
+         })
+
+         outerB.addEventListener("mouseover", function () {
+            console.log("mouseover on outer")
+         })
+
+         innerB.addEventListener("mouseover", function () {
+            console.log("mouseover on inner".toUpperCase())
+         })
+
+         innerB.addEventListener("mouseout", function () {
+            console.log("mouseout on inner".toUpperCase())
          })
       </script>
    </body>

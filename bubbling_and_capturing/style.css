@@ -1,0 +1,38 @@
+html {
+   height: 100%;
+   width: 100%;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+}
+
+.bubble {
+   border-radius: 50%;
+}
+
+.grandparent {
+   background-color: blueviolet;
+   height: 300px;
+   width: 300px;
+   position: relative;
+}
+
+.parent {
+   background-color: cornflowerblue;
+   height: 200px;
+   width: 200px;
+   position: absolute;
+   top: 50px;
+   left: 50px;
+}
+
+.child {
+   background-color: beige;
+   height: 100px;
+   width: 100px;
+   position: absolute;
+   top: 50px;
+   left: 50px;
+}

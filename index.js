@@ -1,64 +1,30 @@
-// Get box elements
-const redBox = document.querySelector(".box.red")
-const greenBox = document.querySelector(".box.green")
-const blueBox = document.querySelector(".box.blue")
-const yellowBox = document.querySelector(".box.yellow")
-const purpleBox = document.querySelector(".box.purple")
-const orangeBox = document.querySelector(".box.orange")
-const mouseEnterCompare = document.querySelector("#box7")
-const mouseOverCompare = document.querySelector("#box8")
-const mouseLeaveCompare = document.querySelector("#box9")
-const mouseOutCompare = document.querySelector("#box10")
-const clickMDMUOrder = document.querySelector("#box11")
-const mouseMove = document.querySelector("#box12")
+// Get elements
+const click = document.querySelector("#click")
+const doubleClick = document.querySelector("#doubleclick")
+const mouseDown = document.querySelector("#mousedown")
+const mouseUp = document.querySelector("#mouseup")
+const clickMDMUOrder = document.querySelector("#click-order")
+const mouseEnter = document.querySelector("#mouseenter")
+const mouseOver = document.querySelector("#mouseover")
+const mouseLeave = document.querySelector("#mouseleave")
+const mouseOut = document.querySelector("#mouseout")
+const mouseMove = document.querySelector("#mousemove")
 
 // Add event listeners
-redBox.addEventListener("click", () => {
-   showEvent(redBox, "click")
+click.addEventListener("click", (e) => {
+   showEvent(e, click, "click")
 })
 
-greenBox.addEventListener("dblclick", () => {
-   showEvent(greenBox, "dblclick")
+doubleClick.addEventListener("dblclick", (e) => {
+   showEvent(e, doubleClick, "dblclick")
 })
 
-blueBox.addEventListener("mousedown", () => {
-   showEvent(blueBox, "mousedown")
+mouseDown.addEventListener("mousedown", (e) => {
+   showEvent(e, mouseDown, "mousedown")
 })
 
-yellowBox.addEventListener("mouseup", () => {
-   showEvent(yellowBox, "mouseup")
-})
-
-purpleBox.addEventListener("mouseenter", () => {
-   showEvent(purpleBox, "mouseenter")
-})
-
-orangeBox.addEventListener("mouseleave", () => {
-   showEvent(orangeBox, "mouseleave")
-})
-
-mouseMove.addEventListener("mousemove", (e) => {
-   console.log(e.clientX, e.clientY)
-})
-
-mouseEnterCompare.addEventListener("mouseenter", (e) => {
-   console.log(e.target)
-   showEvent(mouseEnterCompare, "mouseenter")
-})
-
-mouseOverCompare.addEventListener("mouseover", (e) => {
-   console.log(e.target)
-   showEvent(mouseOverCompare, "mouseover")
-})
-
-mouseLeaveCompare.addEventListener("mouseleave", (e) => {
-   console.log(e.target)
-   showEvent(mouseLeaveCompare, "mouseleave")
-})
-
-mouseOutCompare.addEventListener("mouseout", (e) => {
-   console.log(e.target)
-   showEvent(mouseOutCompare, "mouseout")
+mouseUp.addEventListener("mouseup", (e) => {
+   showEvent(e, mouseUp, "mouseup")
 })
 
 clickMDMUOrder.addEventListener("click", function () {
@@ -73,13 +39,36 @@ clickMDMUOrder.addEventListener("mousedown", function () {
    console.log("mousedown event")
 })
 
-// Show event underneath box
+mouseEnter.addEventListener("mouseenter", (e) => {
+   showEvent(e, mouseEnter, "mouseenter")
+})
 
-const showEvent = (element, eventName) => {
+mouseOver.addEventListener("mouseover", (e) => {
+   showEvent(e, mouseOver, "mouseover")
+})
+
+mouseLeave.addEventListener("mouseleave", (e) => {
+   showEvent(e, mouseLeave, "mouseleave")
+})
+
+mouseOut.addEventListener("mouseout", (e) => {
+   showEvent(e, mouseOut, "mouseout")
+})
+
+mouseMove.addEventListener("mousemove", (e) => {
+   console.log("The mouse is moving!")
+})
+
+function showEvent(e, element, eventName)  {
    const p = document.createElement("p")
    p.innerHTML = eventName.toUpperCase() + "!"
    element.appendChild(p)
+
+   console.log(eventName)
+   console.log(e)
+
    setTimeout(() => {
-      p.innerHTML = ""
-   }, 1000)
+      p.remove()
+   }, 1500)
 }
+
