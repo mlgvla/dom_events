@@ -1,0 +1,66 @@
+const form = document.querySelector("#playlistForm")
+const playlist = document.querySelector("#playlist")
+const player = document.querySelector("#player")
+
+// const inputs = document.querySelectorAll("input")
+
+// inputs.forEach((input) => {
+//    input.addEventListener("focus", (e) => {
+//       e.target.style.backgroundColor = "yellow"
+//    })
+//    input.addEventListener("blur", (e) => {
+//       e.target.style.backgroundColor = ""
+//    })
+// })
+
+let songs = []
+
+form.addEventListener("submit", function (e) {
+   e.preventDefault()
+
+   const songNameInput = document.querySelector("#songName")
+   const artistNameInput = document.querySelector("#artistName")
+   const youtubeLinkInput = document.querySelector("#youtubeLink")
+
+   const songName = songNameInput.value
+   const artistName = artistNameInput.value
+   const youtubeLink = youtubeLinkInput.value
+
+   const song = {
+      songName,
+      artistName,
+      youtubeLink,
+   }
+
+   songs.push(song)
+
+   displayPlaylist()
+
+   //    songNameInput.value = ""
+   //    artistNameInput.value = ""
+   //    youtubeLinkInput.value = ""
+
+   form.reset()
+})
+
+function displayPlaylist() {
+   playlist.innerHTML = ""
+
+   songs.forEach(function (song) {
+      const li = document.createElement("li")
+      li.innerText = `${song.songName} - ${song.artistName}`
+
+      const link = document.createElement("a")
+      link.href = song.youtubeLink
+      link.target = "_blank" // to open in a new tab or window
+      link.rel = "noreferrer noopener" // security measure against phishing
+
+      //   link.addEventListener("click", function (e) {
+      //      e.preventDefault()
+      //      player.src = `https://www.youtube.com/embed/${song.youtubeID}`
+      //   })
+
+      link.appendChild(li)
+      playlist.appendChild(link)
+   })
+}
