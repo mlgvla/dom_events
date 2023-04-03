@@ -52,15 +52,15 @@ function displayPlaylist() {
 
       const link = document.createElement("a")
       link.href = song.youtubeLink
-      link.target = "_blank" // to open in a new tab or window
-      link.rel = "noreferrer noopener" // security measure against phishing
 
-      //   link.addEventListener("click", function (e) {
-      //      e.preventDefault()
-      //      player.src = `https://www.youtube.com/embed/${song.youtubeID}`
-      //   })
+      link.addEventListener("click", function (e) {
+         e.preventDefault()
+         player.src = `https://www.youtube.com/embed/${song.youtubeLink}`
+      })
 
       link.appendChild(li)
       playlist.appendChild(link)
    })
 }
+
+

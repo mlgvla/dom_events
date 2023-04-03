@@ -4,6 +4,11 @@ body {
    padding: 0;
 }
 
+.container {
+   display: flex;
+   justify-content: space-evenly;
+}
+
 h1 {
    text-align: center;
    margin-top: 50px;
@@ -11,7 +16,7 @@ h1 {
 }
 
 #playlistForm {
-   margin: 0 auto;
+   margin: 30px auto;
    width: 500px;
    padding: 20px;
    background-color: #f2f2f2;
@@ -67,13 +72,13 @@ button[type="submit"]:hover {
    background-color: #e6e6e6;
 }
 
-/* #playerContainer {
+#playerContainer {
    margin: 30px auto;
    width: 560px;
    height: 315px;
    border-radius: 5px;
    border-style: solid;
-   
+
    overflow: hidden;
 }
 
@@ -81,4 +86,4 @@ button[type="submit"]:hover {
    width: 100%;
    height: 100%;
    border: none;
-} */ 
+}
