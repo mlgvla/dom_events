@@ -63,4 +63,5 @@ function displayPlaylist() {
    })
 }
 
-
+// make a delete button
+// change order of link and li
