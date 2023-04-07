@@ -4,18 +4,17 @@ const child = document.querySelector(".child")
 
 // Bubbling Example
 
+document.addEventListener("click", (e) => {
+  console.log("Document Bubble")
+} )
 
+grandparent.addEventListener("click", (e) => {
+  console.log("Grandparent Bubble Up")
+} )
 
-// document.addEventListener("click", (e) => {
-//   console.log("Document")
-// } )
-// grandparent.addEventListener("click", (e) => {
-//   console.log("Grandparent Bubble Up")
-// } )
-
-// parent.addEventListener("click", (e) => {
-//   console.log("Parent Bubble Up")
-// })
+parent.addEventListener("click", (e) => {
+  console.log("Parent Bubble Up")
+})
 
 child.addEventListener("click", (e) => {
   console.log("Child Bubble Up")
@@ -24,7 +23,7 @@ child.addEventListener("click", (e) => {
 // Capture Example
 
 // document.addEventListener("click", (e) => {
-//   console.log("Document")
+//   console.log("Document Capture")
 // }, true)
 
 // grandparent.addEventListener("click", (e) => { 

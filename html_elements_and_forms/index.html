@@ -1,80 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Form Elements Example</title>
-	<style>
-        body {
+   <head>
+      <meta charset="UTF-8" />
+      <title>Form Elements Example</title>
+      <style>
+         body {
             font-family: Arial, Helvetica, sans-serif;
-        }
-		label {
-			display: block;
-			margin-bottom: 10px;
-		}
-		
-		select {
-			margin-bottom: 10px;
-		}
-	</style>
-</head>
-<body>
-	<form>
-		<fieldset>
-			<legend>Radio buttons:</legend>
-			<label>
-				<input type="radio" name="radioButtons" value="option1" checked>
-				Option 1
-			</label>
-			<label>
-				<input type="radio" name="radioButtons" value="option2">
-				Option 2
-			</label>
-			<label>
-				<input type="radio" name="radioButtons" value="option3">
-				Option 3
-			</label>
-		</fieldset>
-		
-		<fieldset>
-			<legend>Checkbox:</legend>
-			<label>
-				<input type="checkbox" name="checkbox">
-				Check me!
-			</label>
-		</fieldset>
-		
-		<fieldset>
-			<legend>Dropdown list:</legend>
-			<select name="dropdown">
-				<option value="option1">Option 1</option>
-				<option value="option2">Option 2</option>
-				<option value="option3">Option 3</option>
-			</select>
-		</fieldset>
-	</form>
-	
-	<script>
-		const radioButtons = document.getElementsByName('radioButtons');
-		const checkbox = document.getElementsByName('checkbox')[0];
-		const dropdown = document.getElementsByName('dropdown')[0];
-		
-		for (let i = 0; i < radioButtons.length; i++) {
-			radioButtons[i].addEventListener('change', function(e) {
-                console.log("Event Type: ", e.type)
-				console.log('Selected radio button:', e.target.value);
-			});
-		}
-		
-		checkbox.addEventListener('change', function(e) {
-            console.log(e)
-            console.log("Event Type: ", e.type)
-			console.log('Checkbox is checked:', e.target.checked);
-		});
-		
-		dropdown.addEventListener('change', function(e) {
-            console.log("Event Type: ", e.type)
-			console.log('Selected option in dropdown:', e.target.value);
-		});
-	</script>
-</body>
+         }
+         label {
+            display: block;
+            margin-bottom: 10px;
+         }
+
+         select {
+            margin-bottom: 10px;
+         }
+         fieldset {
+            margin-top: 30px;
+         }
+      </style>
+   </head>
+   <body>
+      <form>
+         <fieldset>
+            <legend>Radio buttons:</legend>
+            <label>
+               <input
+                  type="radio"
+                  name="radioButtons"
+                  value="option1"
+                  checked
+               />
+               Option 1
+            </label>
+            <label>
+               <input type="radio" name="radioButtons" value="option2" />
+               Option 2
+            </label>
+            <label>
+               <input type="radio" name="radioButtons" value="option3" />
+               Option 3
+            </label>
+         </fieldset>
+
+         <fieldset id="checkbox-group">
+            <legend>Checkbox:</legend>
+            <label>
+               <input type="checkbox" name="checkbox" value="checkbox1" />
+               Check me!
+            </label>
+            <label>
+               <input type="checkbox" name="checkbox" value="checkbox2" />
+               Check me!
+            </label>
+         </fieldset>
+
+         <fieldset>
+            <legend>Dropdown list:</legend>
+            <select name="dropdown">
+               <option value="option1">Option 1</option>
+               <option value="option2">Option 2</option>
+               <option value="option3">Option 3</option>
+            </select>
+         </fieldset>
+      </form>
+
+      <script src="./index.js"></script>
+   </body>
 </html>

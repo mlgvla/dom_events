@@ -5,23 +5,23 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>DOM Events</title>
-      <style>
-         div {
-            height: 200px;
-            width: 100%;
-            border-style: solid;
-         }
-         button {
-            margin-top: 10px;
-            margin-left: 10px;
-         }
-      </style>
+      <link rel="stylesheet" href="./style.css">
    </head>
    <body>
-      <div>
-        <button>Change Background Color</button>
-      </div>
-     
+      <section>
+         <div class="button-demo">
+            <button id="color-change-button">Change Background Color</button>
+         </div>
+      </section>
+
+      <section>
+         <div class="key-demo">
+            <label for="text-box">Type inside:</label>
+            <input type="text" id="text-box" />
+            <div id="output"></div>
+         </div>
+      </section>
+
       <script src="./index.js"></script>
    </body>
 </html>
