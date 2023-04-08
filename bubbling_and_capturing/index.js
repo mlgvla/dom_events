@@ -13,6 +13,7 @@ grandparent.addEventListener("click", (e) => {
 } )
 
 parent.addEventListener("click", (e) => {
+  e.stopPropagation()
   console.log("Parent Bubble Up")
 })
 
@@ -23,7 +24,7 @@ child.addEventListener("click", (e) => {
 // Capture Example
 
 // document.addEventListener("click", (e) => {
-//   console.log("Document Capture")
+//   console.log("Document Capture Down")
 // }, true)
 
 // grandparent.addEventListener("click", (e) => { 
@@ -35,6 +36,6 @@ child.addEventListener("click", (e) => {
 // }, true)
 
 // child.addEventListener("click", (e) => {
-//   console.log("Child Bubble Down")
+//   console.log("Child Capture")
 // }, true)
 

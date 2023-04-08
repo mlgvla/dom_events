@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keyboard Events</title>
-    <style>
-        body {
-            height: 100vh;
-            width: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: xx-large;
+          }
+          
+         button {
+            box-sizing: border-box;
+            height: 100px;
+            width: 250px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: xx-large;
+         }
+         section {
+            margin-top: 100px;
+         }
+      </style>
+   </head>
+   <body>
+      <section>
+         <div class="key-demo">
+            <label for="text-box">Type inside:</label>
+            <input type="text" id="text-box" />
+            <div id="output"></div>
+         </div>
+      </section>
 
-        .wrapper {
-            height: 20%;
-            
-        }
-    </style>
-</head>
-<body>
-    <div>Center me, please</div>
-    <script src="./index.js"></script>
-</body>
+      <section>
+         <button id="play-piano">Play Piano</button>
+      </section>
+
+      <section>
+         <p>Mary Had A Little Lamb</p>
+         <p>l-k-j-k-l-l-l__k-k-k__l-'-' l-k-j-k-l-l-l-l-k-k-l-k-j</p>
+      </section>
+      
+      <script src="./index.js"></script>
+   </body>
 </html>
