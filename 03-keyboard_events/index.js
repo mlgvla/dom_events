@@ -22,17 +22,17 @@ playPianoBtn.addEventListener("click", (e) => {
 })
 
 function toyPianoPlay(e) {
-   if (e.code === 74) {
+   if (e.code === "KeyJ") {
       // the "j" key
       g3.currentTime = 0
       g3.play()
    }
-   if (e.code === 75) {
+   if (e.code === "KeyK") {
       // the "k" key
       a3.currentTime = 0
       a3.play()
    }
-   if (e.code === 76) {
+   if (e.code === "KeyL") {
       // the "l" key
       b3.currentTime = 0
       b3.play()
