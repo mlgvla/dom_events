@@ -48,15 +48,3 @@ function showEvent(e) {
    console.log(e)
 }
 
-// function showEvent(e, element, eventName)  {
-//    const p = document.createElement("p")
-//    p.innerHTML = eventName.toUpperCase() + "!"
-//    element.appendChild(p)
-
-//    console.log(eventName)
-//    console.log(e)
-
-//    setTimeout(() => {
-//       p.remove()
-//    }, 1500)
-// }
