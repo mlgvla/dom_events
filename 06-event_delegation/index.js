@@ -1,8 +1,8 @@
 const container = document.querySelector("#container")
 
 container.addEventListener("click", (e) => {
-   //  console.log("Element with event handler: ", e.currentTarget)
-   //  console.log("Element that was clicked: ", e.target)
+    console.log("Element with event handler: ", e.currentTarget.id)
+    console.log("Element that was clicked: ", e.target.id)
     e.target.style.backgroundColor = changeBackground()
   
 })

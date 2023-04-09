@@ -11,21 +11,13 @@ const mouseOut = document.querySelector("#mouseout")
 const mouseMove = document.querySelector("#mousemove")
 
 // Add event listeners
-click.addEventListener("click", (e) => {
-   showEvent(e, click, "click")
-})
+click.addEventListener("click", showEvent)
 
-doubleClick.addEventListener("dblclick", (e) => {
-   showEvent(e, doubleClick, "dblclick")
-})
+doubleClick.addEventListener("dblclick", showEvent)
 
-mouseDown.addEventListener("mousedown", (e) => {
-   showEvent(e, mouseDown, "mousedown")
-})
+mouseDown.addEventListener("mousedown", showEvent)
 
-mouseUp.addEventListener("mouseup", (e) => {
-   showEvent(e, mouseUp, "mouseup")
-})
+mouseUp.addEventListener("mouseup", showEvent)
 
 clickMDMUOrder.addEventListener("click", function () {
    console.log("click event")
@@ -39,36 +31,32 @@ clickMDMUOrder.addEventListener("mousedown", function () {
    console.log("mousedown event")
 })
 
-mouseEnter.addEventListener("mouseenter", (e) => {
-   showEvent(e, mouseEnter, "mouseenter")
-})
+mouseEnter.addEventListener("mouseenter", showEvent)
 
-mouseOver.addEventListener("mouseover", (e) => {
-   showEvent(e, mouseOver, "mouseover")
-})
+mouseOver.addEventListener("mouseover", showEvent)
 
-mouseLeave.addEventListener("mouseleave", (e) => {
-   showEvent(e, mouseLeave, "mouseleave")
-})
+mouseLeave.addEventListener("mouseleave", showEvent)
 
-mouseOut.addEventListener("mouseout", (e) => {
-   showEvent(e, mouseOut, "mouseout")
-})
+mouseOut.addEventListener("mouseout", showEvent)
 
 mouseMove.addEventListener("mousemove", (e) => {
    console.log("The mouse is moving!")
 })
 
-function showEvent(e, element, eventName)  {
-   const p = document.createElement("p")
-   p.innerHTML = eventName.toUpperCase() + "!"
-   element.appendChild(p)
-
-   console.log(eventName)
+function showEvent(e) {
+   console.log(e.type)
    console.log(e)
-
-   setTimeout(() => {
-      p.remove()
-   }, 1500)
 }
 
+// function showEvent(e, element, eventName)  {
+//    const p = document.createElement("p")
+//    p.innerHTML = eventName.toUpperCase() + "!"
+//    element.appendChild(p)
+
+//    console.log(eventName)
+//    console.log(e)
+
+//    setTimeout(() => {
+//       p.remove()
+//    }, 1500)
+// }

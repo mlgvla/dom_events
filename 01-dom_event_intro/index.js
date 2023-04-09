@@ -1,14 +1,10 @@
 const btn = document.querySelector("button") // get element by type
-const div = document.querySelector("div") 
+const div = document.querySelector("div")
 
+btn.addEventListener("click", changeBackground)
 
-btn.addEventListener("click", changeBackground )
-
-
-function changeBackground(event) {
-   console.log(event)
+function changeBackground() {
    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})` // generate a random color
-
    div.style.backgroundColor = rndCol // change the background color of the div
 }
 
@@ -17,8 +13,3 @@ function changeBackground(event) {
 function random(number) {
    return Math.floor(Math.random() * (number + 1)) // generate a random number from 0 to 255
 }
-
-
-
-
-
