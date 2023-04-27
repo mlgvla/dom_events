@@ -46,5 +46,7 @@ mouseMove.addEventListener("mousemove", (e) => {
 function showEvent(e) {
    console.log(e.type)
    console.log(e)
+   // console.log("Who is the target element: ", e.target)
+   // console.log("Who's handling the event: ", e.currentTarget)
 }
 
