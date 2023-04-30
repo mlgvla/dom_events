@@ -1,4 +1,4 @@
-const radioButtons = document.getElementsByName("radioButtons")
+const radioButtons = document.getElementsByName("radio-buttons")
 const checkboxes = document.getElementsByName("checkbox")
 const dropdown = document.getElementById("dropdown")
 

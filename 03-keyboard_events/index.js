@@ -63,6 +63,6 @@ textBox.addEventListener("blur", (e) => {
    // console.log(e)
    e.target.style.backgroundColor = ""
    e.target.style.color = ""
-   e.target.value = ""
+   // e.target.value = ""
    output.textContent = ""
 })
